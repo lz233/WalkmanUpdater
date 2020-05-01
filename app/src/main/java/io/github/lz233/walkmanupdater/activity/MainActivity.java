@@ -19,6 +19,9 @@ import androidx.core.graphics.drawable.DrawableCompat;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.dialog.MaterialDialogs;
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
 
 import io.github.lz233.walkmanupdater.BuildConfig;
 import io.github.lz233.walkmanupdater.R;
@@ -26,26 +29,51 @@ import io.github.lz233.walkmanupdater.utils.AppUtil;
 import io.github.lz233.walkmanupdater.utils.SystemPropertyUtil;
 
 public class MainActivity extends AppCompatActivity {
-    private CardView systemVersionCardView;
-    private TextView systemVersionSummaryTextView;
+    private CardView deviceInformationCardView;
+    private TextView deviceInformationSummaryTextView;
     private CardView updateInfoCardView;
     private CardView firmwareListCardView;
+    private LinearLayout helpLinearLayout;
     private LinearLayout aboutLinearLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //
-        systemVersionCardView = findViewById(R.id.systemVersionCardView);
-        systemVersionSummaryTextView = findViewById(R.id.systemVersionSummaryTextView);
+        deviceInformationCardView = findViewById(R.id.deviceInformationCardView);
+        deviceInformationSummaryTextView = findViewById(R.id.deviceInformationSummaryTextView);
         updateInfoCardView = findViewById(R.id.updateInfoCardView);
         firmwareListCardView = findViewById(R.id.firmwareListCardView);
+        helpLinearLayout = findViewById(R.id.helpLinearLayout);
         aboutLinearLayout = findViewById(R.id.aboutLinearLayout);
         //
+        AppCenter.start(getApplication(), "25068599-7a75-47ef-b966-46b2ecaa1c89", Analytics.class, Crashes.class);
         this.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR | View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
-        systemVersionSummaryTextView.setText(AppUtil.getSystemVersion() + " (" + SystemPropertyUtil.getSystemProperty("vendor.service_id").substring(0,4) + ")");
+        String productID = SystemPropertyUtil.getSystemProperty("vendor.product_id").trim();
+        if(!(productID.equals("NW-A100Series")|productID.equals("NW-ZX500Series"))){
+            MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(MainActivity.this);
+            builder.setTitle(R.string.unsupportDeviceTitle);
+            builder.setMessage(R.string.unsupportDeviceSummary);
+            builder.setPositiveButton(R.string.unsupportDeviceButton, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                }
+            });
+            AlertDialog materialDialogs = builder.create();
+            //materialDialogs.setCancelable(false);
+            materialDialogs.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                @Override
+                public void onDismiss(DialogInterface dialog) {
+                    finish();
+                }
+            });
+            materialDialogs.show();
+        }else {
+            deviceInformationSummaryTextView.setText(productID+" ("+AppUtil.getSystemVersion() + " " + SystemPropertyUtil.getSystemProperty("vendor.service_id").substring(0,4) + ")");
+        }
         //
-        systemVersionCardView.setOnClickListener(new View.OnClickListener() {
+        deviceInformationCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Settings.ACTION_DEVICE_INFO_SETTINGS));
@@ -63,6 +91,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent().setClass(MainActivity.this, FirmwareListActivity.class));
             }
         });
+        helpLinearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //to-do
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://lz233.github.io/2020/05/01/how-to-use-walkman-updater/")));
+            }
+        });
         aboutLinearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,13 +108,13 @@ public class MainActivity extends AppCompatActivity {
                 builder.setNegativeButton(R.string.aboutCoolapk, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://coolapk.com/apk/com.lz233.onetext")));
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://coolapk.com/apk/io.github.lz233.walkmanupdater")));
                     }
                 });
                 builder.setPositiveButton(R.string.aboutGithub, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //to-do
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/lz233/WalkmanUpdater")));
                     }
                 });
                 AlertDialog materialDialogs = builder.create();

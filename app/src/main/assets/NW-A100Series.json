@@ -30,6 +30,11 @@
     "fileURL": "https://info.update.sony.net/PA001/NW-A100Series_0005/contents/0004/NW-A100_0005_V1_21_00_NW_WM_FW.UPG"
   },
   {
+    "versionName": "1.21.00",
+    "versionArea": "0006",
+    "fileURL": "https://info.update.sony.net/PA001/NW-A100Series_0006/contents/0004/NW-A100_0006_V1_21_00_NW_WM_FW.UPG"
+  },
+  {
     "versionName": "1.20.02",
     "versionArea": "0000",
     "fileURL": "https://info.update.sony.net/PA001/NW-A100Series_0000/contents/0003/NW-A100_0000_V1_20_02_NW_WM_FW.UPG"
@@ -60,6 +65,11 @@
     "fileURL": "https://info.update.sony.net/PA001/NW-A100Series_0005/contents/0003/NW-A100_0005_V1_20_02_NW_WM_FW.UPG"
   },
   {
+    "versionName": "1.20.02",
+    "versionArea": "0006",
+    "fileURL": "https://info.update.sony.net/PA001/NW-A100Series_0006/contents/0003/NW-A100_0006_V1_20_02_NW_WM_FW.UPG"
+  },
+  {
     "versionName": "1.10.03",
     "versionArea": "0000",
     "fileURL": "https://info.update.sony.net/PA001/NW-A100Series_0000/contents/0002/NW-A100_0000_V1_10_03_NW_WM_FW.UPG"
@@ -88,6 +98,11 @@
     "versionName": "1.10.03",
     "versionArea": "0005",
     "fileURL": "https://info.update.sony.net/PA001/NW-A100Series_0005/contents/0002/NW-A100_0005_V1_10_03_NW_WM_FW.UPG"
+  },
+  {
+    "versionName": "1.10.03",
+    "versionArea": "0006",
+    "fileURL": "https://info.update.sony.net/PA001/NW-A100Series_0006/contents/0002/NW-A100_0006_V1_10_03_NW_WM_FW.UPG"
   },
   {
     "versionName": "1.01.01",

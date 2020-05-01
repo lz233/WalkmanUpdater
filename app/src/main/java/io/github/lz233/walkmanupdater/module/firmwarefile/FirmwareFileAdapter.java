@@ -1,5 +1,11 @@
 package io.github.lz233.walkmanupdater.module.firmwarefile;
 
+import android.app.DownloadManager;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,9 +21,11 @@ import io.github.lz233.walkmanupdater.R;
 
 public class FirmwareFileAdapter extends RecyclerView.Adapter<FirmwareFileAdapter.ViewHolder> {
     private List<FirmwareFile> firmwareFileList;
-    public FirmwareFileAdapter(List<FirmwareFile> firmwareFileList){
+
+    public FirmwareFileAdapter(List<FirmwareFile> firmwareFileList) {
         this.firmwareFileList = firmwareFileList;
     }
+
     public ViewHolder onCreateViewHolder(final ViewGroup parent, int viewType) {
         final View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_firmware, parent, false);
         final FirmwareFileAdapter.ViewHolder holder = new ViewHolder(view);
@@ -26,13 +34,13 @@ public class FirmwareFileAdapter extends RecyclerView.Adapter<FirmwareFileAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        FirmwareFile firmwareFile  = firmwareFileList.get(position);
+        final FirmwareFile firmwareFile = firmwareFileList.get(position);
         holder.firmwareFileTitleTextView.setText(firmwareFile.getFirmwareVersion());
         holder.firmwareFileSummaryTextView.setText(firmwareFile.getFirmwareFileSize());
         holder.firmwareFileCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //to-do
+                firmwareFile.getActivity().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(firmwareFile.getFirmwareFileURL())));
             }
         });
     }
@@ -41,11 +49,13 @@ public class FirmwareFileAdapter extends RecyclerView.Adapter<FirmwareFileAdapte
     public int getItemCount() {
         return this.firmwareFileList.size();
     }
-    static class ViewHolder extends RecyclerView.ViewHolder{
+
+    static class ViewHolder extends RecyclerView.ViewHolder {
         View itemView;
         CardView firmwareFileCardView;
         TextView firmwareFileTitleTextView;
         TextView firmwareFileSummaryTextView;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             this.itemView = itemView;

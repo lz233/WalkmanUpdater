@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Walkman Updater</string>
+    <string name="firmwareListTitle">固件列表</string>
+    <string name="firmwareListSummary">点击查看</string>
+    <string name="aboutTitle">关于</string>
+    <string name="aboutCoolapk">酷安</string>
+    <string name="aboutGithub">GitHub</string>
+    <string name="updateInfoTitle">更新日志</string>
+    <string name="updateInfoSummary">点击查看</string>
+    <string name="helpTitle">帮助</string>
+    <string name="unsupportDeviceTitle">不支持的设备</string>
+    <string name="unsupportDeviceSummary">不支持当前设备。本应用仅支持NW-A100Series和NW-ZX500Series。</string>
+    <string name="unsupportDeviceButton">退出</string>
+    <string name="deviceInformationTitle">设备信息</string>
+</resources>

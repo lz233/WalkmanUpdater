@@ -39,7 +39,7 @@
             </LinearLayout>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/systemVersionCardView"
+                android:id="@+id/deviceInformationCardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
@@ -59,28 +59,28 @@
                     android:paddingBottom="15dp">
 
                     <View
-                        android:id="@+id/systemVersionView"
+                        android:id="@+id/deviceInformationView"
                         android:layout_width="28dp"
                         android:layout_height="28dp"
                         android:layout_centerVertical="true"
                         android:background="@drawable/ic_perm_device_information" />
 
                     <TextView
-                        android:id="@+id/systemVersionTitleTextView"
+                        android:id="@+id/deviceInformationTitleTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="25dp"
-                        android:layout_toEndOf="@id/systemVersionView"
-                        android:text="@string/systemVersionTitle"
+                        android:layout_toEndOf="@id/deviceInformationView"
+                        android:text="@string/deviceInformationTitle"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/colorWhite" />
 
                     <TextView
-                        android:id="@+id/systemVersionSummaryTextView"
+                        android:id="@+id/deviceInformationSummaryTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/systemVersionTitleTextView"
-                        android:layout_alignStart="@id/systemVersionTitleTextView"
+                        android:layout_below="@id/deviceInformationTitleTextView"
+                        android:layout_alignStart="@id/deviceInformationTitleTextView"
                         android:layout_marginTop="5dp"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/colorWhite" />
@@ -185,6 +185,27 @@
                         android:textColor="@color/colorWhite" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:id="@+id/helpLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/ic_help"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:text="@string/helpTitle"/>
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/aboutLinearLayout"
                 android:layout_width="match_parent"

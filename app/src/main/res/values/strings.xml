@@ -1,13 +1,20 @@
 <resources>
     <string name="app_name">Walkman Updater</string>
-    <string name="systemVersionTitle">System Version</string>
+    <string name="deviceInformationTitle">Device Information</string>
     <string name="firmwareListTitle">Firmware List</string>
     <string name="firmwareListSummary">Click to view</string>
     <string name="aboutTitle">About</string>
-    <string name="title_activity_firmware_list">@string/firmwareListTitle</string>
+    <string name="title_activity_firmware_list" translatable="false">@string/firmwareListTitle</string>
     <string name="aboutCoolapk">Coolapk</string>
     <string name="aboutGithub">GitHub</string>
     <string name="updateInfoTitle">Update Log</string>
     <string name="updateInfoSummary">Click to view</string>
-    <string name="title_activity_update_log">@string/updateInfoTitle</string>
+    <string name="title_activity_update_log" translatable="false">@string/updateInfoTitle</string>
+    <string name="helpTitle">Help</string>
+    <string name="unsupportDeviceTitle">Unsupport Device</string>
+    <string name="unsupportDeviceSummary">This device is not supported. This application only supports NW-A100Series and NW-ZX500Series.</string>
+    <string name="unsupportDeviceButton">Exit</string>
+    <string name="detailTitle1">Current Region</string>
+    <string name="detailTitle2">Select Region</string>
+    <string name="copied">Copied</string>
 </resources>
