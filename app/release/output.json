@@ -1,1 +1,20 @@
-[{"outputType":{"type":"APK"},"apkData":{"type":"MAIN","splits":[],"versionCode":20200501,"versionName":"0.1","enabled":true,"outputFile":"app-release.apk","fullName":"release","baseName":"release","dirName":""},"path":"app-release.apk","properties":{}}]
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "io.github.lz233.walkmanupdater",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 20200625,
+      "versionName": "20200625",
+      "enabled": true,
+      "outputFile": "app-release.apk"
+    }
+  ]
+}
