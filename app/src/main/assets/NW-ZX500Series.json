@@ -6,6 +6,11 @@
   },
   {
     "versionName": "3.00.07",
+    "versionArea": "0001",
+    "fileURL": "http://info.update.sony.net/PA001/NW-ZX500Series_0001/contents/0009/NW-ZX500_0001_V3_00_07_NW_WM_FW.UPG"
+  },
+  {
+    "versionName": "3.00.07",
     "versionArea": "0002",
     "fileURL": "http://info.update.sony.net/PA001/NW-ZX500Series_0002/contents/0008/NW-ZX500_0002_V3_00_07_NW_WM_FW.UPG"
   },
