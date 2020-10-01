@@ -60,11 +60,6 @@
     "fileURL": "http://info.update.sony.net/PA001/NW-ZX500Series_0005/contents/0007/NW-ZX500_0005_V2_02_01_NW_WM_FW.UPG"
   },
   {
-    "versionName": "2.02.01",
-    "versionArea": "0006",
-    "fileURL": "http://info.update.sony.net/PA001/NW-ZX500Series_0006/contents/0007/NW-ZX500_0006_V2_02_01_NW_WM_FW.UPG"
-  },
-  {
     "versionName": "2.01.00",
     "versionArea": "0000",
     "fileURL": "http://info.update.sony.net/PA001/NW-ZX500Series_0000/contents/0006/NW-ZX500_0000_V2_01_00_NW_WM_FW.UPG"
@@ -93,11 +88,6 @@
     "versionName": "2.01.00",
     "versionArea": "0005",
     "fileURL": "http://info.update.sony.net/PA001/NW-ZX500Series_0005/contents/0006/NW-ZX500_0005_V2_01_00_NW_WM_FW.UPG"
-  },
-  {
-    "versionName": "2.01.00",
-    "versionArea": "0006",
-    "fileURL": "http://info.update.sony.net/PA001/NW-ZX500Series_0006/contents/0006/NW-ZX500_0006_V2_01_00_NW_WM_FW.UPG"
   },
   {
     "versionName": "2.00.05",
@@ -130,11 +120,6 @@
     "fileURL": "http://info.update.sony.net/PA001/NW-ZX500Series_0005/contents/0005/NW-ZX500_0005_V2_00_05_NW_WM_FW.UPG"
   },
   {
-    "versionName": "2.00.05",
-    "versionArea": "0006",
-    "fileURL": "http://info.update.sony.net/PA001/NW-ZX500Series_0006/contents/0005/NW-ZX500_0006_V2_00_05_NW_WM_FW.UPG"
-  },
-  {
     "versionName": "1.21.00",
     "versionArea": "0000",
     "fileURL": "https://info.update.sony.net/PA001/NW-ZX500Series_0000/contents/0004/NW-ZX500_0000_V1_21_00_NW_WM_FW.UPG"
@@ -163,11 +148,6 @@
     "versionName": "1.21.00",
     "versionArea": "0005",
     "fileURL": "https://info.update.sony.net/PA001/NW-ZX500Series_0005/contents/0004/NW-ZX500_0005_V1_21_00_NW_WM_FW.UPG"
-  },
-  {
-    "versionName": "1.21.00",
-    "versionArea": "0006",
-    "fileURL": "https://info.update.sony.net/PA001/NW-ZX500Series_0006/contents/0004/NW-ZX500_0006_V1_21_00_NW_WM_FW.UPG"
   },
   {
     "versionName": "1.20.02",
@@ -200,11 +180,6 @@
     "fileURL": "https://info.update.sony.net/PA001/NW-ZX500Series_0005/contents/0003/NW-ZX500_0005_V1_20_02_NW_WM_FW.UPG"
   },
   {
-    "versionName": "1.20.02",
-    "versionArea": "0006",
-    "fileURL": "https://info.update.sony.net/PA001/NW-ZX500Series_0006/contents/0003/NW-ZX500_0006_V1_20_02_NW_WM_FW.UPG"
-  },
-  {
     "versionName": "1.10.03",
     "versionArea": "0000",
     "fileURL": "https://info.update.sony.net/PA001/NW-ZX500Series_0000/contents/0002/NW-ZX500_0000_V1_10_03_NW_WM_FW.UPG"
@@ -233,11 +208,6 @@
     "versionName": "1.10.03",
     "versionArea": "0005",
     "fileURL": "https://info.update.sony.net/PA001/NW-ZX500Series_0005/contents/0002/NW-ZX500_0005_V1_10_03_NW_WM_FW.UPG"
-  },
-  {
-    "versionName": "1.10.03",
-    "versionArea": "0006",
-    "fileURL": "https://info.update.sony.net/PA001/NW-ZX500Series_0006/contents/0002/NW-ZX500_0006_V1_10_03_NW_WM_FW.UPG"
   },
   {
     "versionName": "1.01.01",
